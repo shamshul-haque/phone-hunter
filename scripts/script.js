@@ -41,8 +41,8 @@ const displayPhones = (phones, isShowAll) => {
     <div class="card-body">
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-        <button class="btn btn-primary">Buy Now</button>
+        <div class="card-actions justify-center">
+        <button onclick="handleShowDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
         </div>
     </div>
     `;
@@ -72,6 +72,16 @@ const toggleLoader = (isLoading) => {
   } else {
     loadingSpinner.classList.add("hidden");
   }
+};
+
+// handle show details button
+const handleShowDetails = async (slug) => {
+  // load single phone data
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/phone/${slug}`
+  );
+  const data = await res.json();
+  console.log(data);
 };
 
 // handel show all button
