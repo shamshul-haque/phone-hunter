@@ -81,7 +81,21 @@ const handleShowDetails = async (slug) => {
     `https://openapi.programming-hero.com/api/phone/${slug}`
   );
   const data = await res.json();
-  console.log(data);
+  const details = data.data;
+  showPhoneDetails(details);
+};
+
+// modal details
+const showPhoneDetails = (details) => {
+  console.log(details);
+  const phoneName = document.getElementById("modal-phone-name");
+  phoneName.innerText = details.name;
+  const showDetailContainer = document.getElementById("show-detail-container");
+  showDetailContainer.innerHTML = `
+  <img src="${details.image}" alt="${details.name}" />
+  <p><span>Storage:</span>${details?.mainFeatures?.storage}</p>
+  `;
+  show_details_modal.showModal();
 };
 
 // handel show all button
