@@ -7,12 +7,12 @@ const loadPhone = async (searchText, isShowAll) => {
   const phones = data.data;
   displayPhones(phones, isShowAll);
 };
+loadPhone("oppo");
 
 // display the loaded data
 const displayPhones = (phones, isShowAll) => {
   // get phone container
   const phoneContainer = document.getElementById("phone-container");
-
   //   clear phone container cards before add new cards
   phoneContainer.textContent = "";
 
@@ -85,6 +85,9 @@ const handleShowDetails = async (slug) => {
   showPhoneDetails(details);
 };
 
+// window.onload = () => {
+//   handleShowDetails();
+// };
 // modal details
 const showPhoneDetails = (details) => {
   console.log(details);

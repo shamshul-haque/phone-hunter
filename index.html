@@ -33,21 +33,21 @@
   <body class="max-w-screen-xl mx-auto">
     <!-- header section -->
     <header class="bg-blue-50 px-5 md:px-10 lg:px-20">
-      <!-- navbar -->
+      <!-- navbar section -->
       <section class="py-5">
         <nav class="flex justify-between items-center font-poppins">
           <h1 class="text-xl md:text-2xl font-bold text-gray-700">
             Phone Hunter
           </h1>
           <button
-            class="text-base font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+            class="text-base font-semibold text-white bg-blue-500 px-3 py-2 rounded-lg"
           >
             Sign Up
           </button>
         </nav>
       </section>
 
-      <!-- banner -->
+      <!-- banner section -->
       <section class="pb-20 md:pb-44">
         <div class="text-center space-y-5">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-700">
@@ -59,7 +59,7 @@
             humou.
           </p>
           <button
-            class="text-base font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+            class="text-base font-semibold text-white bg-blue-500 px-3 py-2 rounded-lg"
           >
             Buy Now
           </button>
@@ -69,10 +69,12 @@
 
     <!-- main section -->
     <main class="px-5 md:px-10 lg:px-20">
-      <!-- hero -->
+      <!-- hero section -->
       <section class="py-5 md:py-10">
         <!-- hero images -->
-        <div class="flex justify-center items-center gap-5 md:gap-10 -mt-20 md:-mt-44">
+        <div
+          class="flex justify-center items-center gap-5 md:gap-10 -mt-20 md:-mt-44"
+        >
           <img
             src="./images/phone.png"
             alt="phone"
@@ -106,7 +108,7 @@
             />
             <button
               onclick="handleSearch()"
-              class="text-base font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+              class="text-base font-semibold text-white bg-blue-500 px-3 py-2 rounded-lg"
             >
               Search
             </button>
@@ -114,27 +116,31 @@
         </div>
       </section>
 
-      <!-- search items -->
+      <!-- phones section -->
       <section>
-        <!-- spinner or loader -->
-        <div id="loading-spinner" class="text-center my-40 hidden">
+        <!-- loader -->
+        <div id="loader" class="text-center pt-5 hidden">
           <span class="loading loading-spinner loading-lg"></span>
         </div>
+
+        <!-- phone items -->
         <div
           id="phone-container"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5"
         >
-          <!-- phone items added by dynamically -->
+          <!-- phone items will be added by dynamically -->
         </div>
 
         <!-- show all button -->
-        <button
-          onclick="handleShowAll()"
-          id="show-all-btn"
-          class="btn btn-accent hidden"
-        >
-          Show All
-        </button>
+        <div class="flex justify-center py-5">
+          <button
+            onclick="handleShowAll()"
+            id="show-all"
+            class="text-base font-semibold text-white bg-blue-500 px-3 py-2 rounded-lg hidden"
+          >
+            Show All
+          </button>
+        </div>
       </section>
 
       <!-- show details modal -->
@@ -160,6 +166,7 @@
     <footer></footer>
 
     <!-- scripts section-->
-    <script src="./scripts/script.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
