@@ -30,28 +30,28 @@
       }
     </style>
   </head>
-  <body>
+  <body class="max-w-screen-xl mx-auto">
     <!-- header section -->
-    <header class="max-w-screen-xl mx-auto bg-blue-50">
+    <header class="bg-blue-50 px-5 md:px-10 lg:px-20">
       <!-- navbar -->
-      <nav
-        class="flex justify-between items-center mx-5 md:mx-10 lg:mx-20 py-5 font-poppins"
-      >
-        <h1 class="text-xl md:text-2xl font-bold text-gray-700">
-          Phone Hunter
-        </h1>
-        <button
-          class="text-base md:text-lg font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
-        >
-          Sign Up
-        </button>
-      </nav>
+      <section class="py-5">
+        <nav class="flex justify-between items-center font-poppins">
+          <h1 class="text-xl md:text-2xl font-bold text-gray-700">
+            Phone Hunter
+          </h1>
+          <button
+            class="text-base md:text-lg font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+          >
+            Sign Up
+          </button>
+        </nav>
+      </section>
 
       <!-- banner -->
-      <section class="mx-5 md:mx-10 lg:mx-20">
+      <section class="space-y-10">
         <!-- banner content -->
         <div class="text-center space-y-5">
-          <h1 class="text-3xl md:text-5xl font-bold text-gray-700">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-700">
             Apple Iphone 15 Pro Max
           </h1>
           <p class="text-base md:text-lg text-gray-700 lg:px-40">
@@ -67,26 +67,30 @@
         </div>
 
         <!-- banner images -->
-        <div class="flex justify-center items-center gap-10 pt-10">
-          <img src="./images/phone.png" alt="phone" class="w-28 h-56" />
-          <img src="./images/phone.png" alt="phone" class="w-40 h-80" />
-          <img src="./images/phone.png" alt="phone" class="w-28 h-56" />
+        <div class="flex justify-center items-center gap-5 md:gap-10">
+          <img src="./images/phone.png" alt="phone" class="w-14 md:w-28 h-28 md:h-56" />
+          <img src="./images/phone.png" alt="phone" class="w-20 md:w-40 h-40 md:h-80" />
+          <img src="./images/phone.png" alt="phone" class="w-14 md:w-28 h-28 md:h-56" />
         </div>
       </section>
     </header>
 
     <!-- main section -->
-    <main class="mx-20">
+    <main class="px-5 md:px-10 lg:px-20">
       <!-- search box -->
-      <section>
+      <section class="">
         <div>
+          <h1 class="">Search Your Phone</h1>
           <input
             id="search-field"
             type="text"
             placeholder="Search Your Phone"
-            class="input input-bordered w-full max-w-xs"
+            class="input bg-gray-200"
           />
-          <button onclick="handleSearch()" class="btn btn-accent">
+          <button
+            onclick="handleSearch()"
+            class="text-base md:text-lg font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+          >
             Search
           </button>
         </div>
