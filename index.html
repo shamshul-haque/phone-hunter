@@ -14,24 +14,55 @@
 
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom styles -->
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
   </head>
-  <body class="max-w-screen-xl mx-auto">
+  <body>
     <!-- header section -->
-    <header class="mx-20">
-      <h1 class="text-8xl">Phone Hunter</h1>
+    <header class="max-w-screen-xl mx-auto bg-blue-50">
+      <!-- navbar -->
+      <nav
+        class="flex justify-between items-center mx-5 md:mx-10 lg:mx-20 py-5 font-poppins"
+      >
+        <h1 class="text-xl md:text-2xl font-bold text-gray-700">
+          Phone Hunter
+        </h1>
+        <button
+          class="text-base md:text-lg font-bold text-white bg-blue-500 px-3 py-2 rounded-lg"
+        >
+          Sign Up
+        </button>
+      </nav>
+
+
     </header>
 
     <!-- main section -->
     <main class="mx-20">
       <!-- search box -->
       <section>
-        <input
+        <div>
+          <input
           id="search-field"
           type="text"
           placeholder="Search Your Phone"
           class="input input-bordered w-full max-w-xs"
         />
         <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+        </div>
       </section>
 
       <!-- search items -->
@@ -60,7 +91,10 @@
       <!-- show details modal -->
       <section>
         <!-- Open the modal using ID.showModal() method -->
-        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <dialog
+          id="show_details_modal"
+          class="modal modal-bottom sm:modal-middle"
+        >
           <form method="dialog" class="modal-box">
             <h3 id="modal-phone-name" class="font-bold text-lg"></h3>
             <div id="show-detail-container"></div>
