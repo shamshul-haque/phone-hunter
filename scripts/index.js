@@ -100,15 +100,15 @@ const detailsModal = (details) => {
         }</h1>
         <p class="text-base text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <p class="text-base"><span class="font-semibold">Storage: </span>${
-          details?.mainFeatures?.storage
+          details?.mainFeatures?.storage || "No available"
         }</p>
         <p class="text-base"><span class="font-semibold">Display Size: </span>${
-          details?.mainFeatures?.displaySize
+          details?.mainFeatures?.displaySize || "No available"
         }</p>
         <p class="text-base"><span class="font-semibold">Chip Set: </span>${
-          details?.mainFeatures?.chipSet
+          details?.mainFeatures?.chipSet || "No available"
         }</p>
-        <p class="text-base"><span class="font-semibold">Chip Set: </span>${
+        <p class="text-base"><span class="font-semibold">GPS: </span>${
           details?.others?.GPS || "No available"
         }</p>
     </div>
